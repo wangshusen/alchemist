@@ -20,12 +20,13 @@ cd $SCRATCH/alchemistSHELL
 git clone https://github.com/alexgittens/alchemist.git
 cd alchemist
 git checkout cori-version 
-source ./setup/cori-bootstrap.sh
+cd ..
+source ./alchemist/setup/cori-bootstrap.sh
 
 module unload PrgEnv-intel
 module load PrgEnv-gnu gcc java cmake python boost sbt
 export ALPREFIX=$SCRATCH/alchemistSHELL/bins
-
+cd alchemist/
 make build
 ```
 

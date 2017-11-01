@@ -57,6 +57,9 @@ if [ "$WITH_GMP" = 1 ]; then
   cd ..
 fi
 
+git repack -a -f -d --window=250 --depth=250
+
+
 # Elemental
 if [ "$WITH_EL" = 1 ]; then
   git clone https://github.com/elemental/Elemental

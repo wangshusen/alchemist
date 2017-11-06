@@ -20,7 +20,7 @@ lazy val tests = (project in file("test")).
   settings(commonSettings: _*).
   settings(
     name := "alchemist-tests",
-    mainClass in assembly := Some("amplab.alchemist.BasicSuite")
+    mainClass in assembly := Some("amplab.alchemist.TestKmeans")
   ).
   dependsOn(core)
 
